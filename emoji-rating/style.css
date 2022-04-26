@@ -2,7 +2,7 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    background-color: orange;
+    background-color: lightskyblue;
     justify-content: center;
     align-items: center;
 }
@@ -35,10 +35,11 @@ body {
 }
 
 .fa-star.active {
-    color: lightgreen;
+    color: gold;
 }
 
 .far {
     transform: translateY(0);
     transition: transform 0.2s;
+    color:red;
 }

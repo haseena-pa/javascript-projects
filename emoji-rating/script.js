@@ -1,21 +1,20 @@
+const mainDiv = document.querySelector('.rating-container');
 const emoji = document.querySelectorAll('.far');
-
 const star = document.querySelectorAll('.fa-star');
-star.forEach((element, index) => {
-    element.addEventListener('click', function () {
-        star.forEach((el, i) => {
-            console.log(index, i)
-            if (i > index) {
-                star[i].classList.remove('active');
-            } else {
-                star[i].classList.add('active');
-            }
-
-        });
-
-        emoji.forEach((elem, ind) => {
-            elem.style.transform = `translateY(-${index * 48}px)`;
-        })
+const colors = ["red", "orange", "yellow", "lightgreen", "green"];
+//Event Delegation
+mainDiv.addEventListener('click', (event) => {
+    const index = event.target.dataset.index;
+    star.forEach((el, i) => {
+        if (i > index) {
+            star[i].classList.remove('active');
+        } else {
+            star[i].classList.add('active');
+        }
 
     });
-})
+    emoji.forEach((elem) => {
+        elem.style.transform = `translateY(-${index * 48}px)`;
+        elem.style.color = colors[index];
+    });
+});
