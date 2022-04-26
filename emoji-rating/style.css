@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    background-color: orange;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 400px;
+    background-color: white;
+    height: 200px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.emoji-container {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.rating-container {
+    margin: 10px;
+}
+
+.fa-star {
+    color: lightgrey;
+    cursor: pointer;
+}
+
+.fa-star.active {
+    color: lightgreen;
+}
+
+.far {
+    transform: translateY(0);
+    transition: transform 0.2s;
+}
