@@ -10,9 +10,9 @@ function increment() {
     const d = 24 * h;
 
     const days = diff / d;
-    const hours = (diff % days) / h;
-    const minutes = diff / m;
-    const seconds = diff / s;
+    const hours = (diff % d) / h;
+    const minutes = (diff % h) / m;
+    const seconds = (diff % m) / s;
 
     let secondDiv = document.querySelector('.seconds');
     let minutesDiv = document.querySelector('.minutes');
