@@ -31,4 +31,4 @@ function checkFieldValue(fieldArr) {
 document.addEventListener('submit', (e) => {
     e.preventDefault();
     checkFieldValue([username, email, password, confirmPassword]);
-})
+});
